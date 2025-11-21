@@ -3,6 +3,8 @@
 
    --white-color: #fff;
    --dark-color: #01070A;
+   --first-color: #1B8041;
+   --secundary-color: #F4C400;
    --linear-color: linear-gradient(97deg, #40AC7C 0%, #185D3B 100%);
 
    --title-font: anton;
@@ -606,12 +608,85 @@ img {
    padding: 1.5rem 1rem;
    display: grid;
    place-items: center;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 1rem;
+   background: rgba(255, 255, 255, 0.08);
+   border-radius: 1rem;
 }
 
 .partner__img {
    width: 220px;
+}
+
+/* MARQUEE */
+.marquee {
+   height: 35vh;
+}
+
+.marquee__moving {
+   position: relative;
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+.marquee__moving-content {
+   transform: rotate(-8deg);
+   white-space: nowrap;
+   width: 100%;
+}
+
+.marquee__moving-content.green {
+   background-color: var(--first-color);
+}
+
+.marquee__moving-content.yellow {
+   background-color: var(--secundary-color);
+   transform: translateY(-1.8rem) rotate(8deg);
+}
+
+.marquee__move {
+   display: inline-block;
+   flex-direction: row;
+   white-space: nowrap;
+   animation-name: marqueeMove;
+   animation-duration: 32s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+}
+
+.marquee__move-right {
+   animation-direction: reverse;
+   animation-delay: -1s;
+   flex-direction: row-reverse;
+}
+
+.marquee__move-item {
+   margin: 0 .5rem;
+   display: inline-block !important;
+}
+
+.marquee__move-item h4 {
+   font-size: 20px;
+   text-transform: uppercase;
+   color: var(--white-color);
+}
+
+@keyframes marqueeMove {
+   0% {
+      transform: translateX(0);
+   }
+
+   100% {
+      transform: translateX(-50%);
+   }
+}
+
+@keyframes marqueeMoveRight {
+   0% {
+      transform: translateX(50%);
+   }
+
+   100% {
+      transform: translateX(100%);
+   }
 }
 
 /* MEDIA QUERIES */
@@ -708,6 +783,17 @@ img {
       height: 100%;
    }
 
+   .marquee__move-item h4 {
+      font-size: 32px;
+   }
+
+   .marquee__moving-content.yellow {
+      transform: translateY(-2.5rem) rotate(8deg);
+   }
+
+   .marquee__move-item {
+      margin: 0 2rem;
+   }
 }
 
 @media (min-width: 1150px) {
