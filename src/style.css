@@ -410,6 +410,88 @@ img {
    align-items: start;
 }
 
+/* DESTAQUE */
+.destaque {
+   background: var(--dark-color);
+   border-radius: 16px;
+   color: var(--white-color);
+}
+
+.destaque__title {
+   font-size: var(--h2-font-size);
+   text-align: center;
+   margin-bottom: 2rem;
+}
+
+.destaque__content {
+   row-gap: 2rem;
+}
+
+.destaque__card {
+   cursor: pointer;
+   position: relative;
+   padding: 1rem;
+}
+
+.destaque__card-info {
+   position: relative;
+   z-index: 2;
+}
+
+.destaque__card-info h1 {
+   font-size: 56px;
+   margin-bottom: 2rem;
+}
+
+.destaque__line {
+   width: 100%;
+   height: 1px;
+   background-color: var(--white-color);
+   opacity: .3;
+   margin-bottom: 2rem;
+}
+
+.detaque__flex {
+   display: flex;
+   align-items: center;
+   column-gap: .8rem;
+   margin-bottom: 1rem;
+}
+
+.detaque__flex i {
+   font-size: 1.5rem;
+}
+
+.detaque__card-title {
+   display: inline-block;
+   font-size: 1.25rem;
+}
+
+.card__img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+   transition: all .4s;
+}
+
+.destaque__card:hover .card__img {
+   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.detaque__card-overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(0deg, rgba(1, 7, 10, 0.36) 0%, rgba(1, 7, 10, 0.36) 100%);
+   z-index: 1;
+}
+
 /* MEDIA QUERIES */
 @media(max-width: 320px) {}
 
@@ -446,6 +528,15 @@ img {
       flex-direction: row;
       column-gap: 1.25rem;
       align-items: center;
+   }
+
+   .destaque__title {
+      margin-bottom: 52px;
+   }
+
+   .destaque__content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
    }
 
 }
@@ -520,6 +611,10 @@ img {
       margin-inline: auto;
    }
 
+   .section {
+      padding-block: 80px;
+   }
+
    .about__container {
       column-gap: 64px
    }
@@ -529,10 +624,30 @@ img {
    }
 
    .about__description:nth-child(4) {
-     margin-bottom: 52px;
+      margin-bottom: 52px;
    }
 
    .about__image {
       height: 680px;
+   }
+
+   .destaque__content {
+      gap: 80px;
+   }
+
+   .destaque__title {
+      margin-bottom: 80px;
+   }
+
+   .destaque__container.container {
+      padding-inline: 8rem;
+   }
+
+   .destaque__card {
+      height: 400px;
+   }
+
+   .destaque__card-info h1 {
+      font-size: 128px;
    }
 }
