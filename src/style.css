@@ -195,6 +195,10 @@ button {
    background: rgba(255, 255, 255, 0.16);
 }
 
+.active-link {
+   background: rgba(255, 255, 255, 0.16);
+}
+
 .nav__toggle {
    min-width: 40px;
    min-height: 40px;
@@ -1413,6 +1417,10 @@ button {
       height: 380px;
    }
 
+   .services__card:nth-last-child(1) .services__card-data {
+      column-gap: 6rem;
+   }
+
    .services__yellow-img {
       width: 300px;
    }
@@ -1543,6 +1551,10 @@ button {
 
    .about__buttons {
       justify-content: start;
+   }
+
+   .services__card:nth-last-child(1) .services__card-data {
+      column-gap: 8rem;
    }
 
    .partner__container {

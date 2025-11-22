@@ -4,6 +4,7 @@ import accordionOpen from './js/accordion';
 import sendEmail from './js/sendemail';
 import heroImages from './js/heroImages';
 import createLenis from './js/lenis';
+import scrollActive from './js/scrollActive';
 
 document.addEventListener("DOMContentLoaded", () => {
    openMenu();
@@ -11,4 +12,5 @@ document.addEventListener("DOMContentLoaded", () => {
    sendEmail();
    heroImages();
    createLenis();
+   scrollActive();
 })
