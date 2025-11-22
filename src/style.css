@@ -32,6 +32,7 @@
 body {
    font-family: var(--body-font);
    font-weight: 100;
+   font-size: var(--body-font-size);
 }
 
 .main {
@@ -57,6 +58,15 @@ h2 {
 img {
    max-width: 100%;
    height: auto;
+}
+
+button {
+   outline: none;
+   border: none;
+   cursor: pointer;
+   font-family: var(--body-font);
+   font-size: 1rem;
+   justify-content: center;
 }
 
 .container {
@@ -804,7 +814,7 @@ img {
    background-color: var(--dark-color);
 }
 
-.accordion-open .faq__header  .faq__card-title,
+.accordion-open .faq__header .faq__card-title,
 .accordion-open .faq__card-content {
    color: var(--white-color);
 }
@@ -814,6 +824,78 @@ img {
    color: var(--dark-color);
 }
 
+/* CONTACT */
+.contact__container {
+   background-color: var(--white-color);
+   box-shadow: 0 24px 120px 0 rgba(10, 38, 99, 0.04);
+   border-radius: 1rem;
+   padding: 1.5rem;
+   row-gap: 2rem;
+}
+
+.contact__form {
+   display: grid;
+   row-gap: 1.5rem;
+}
+
+.contact__form-title {
+   margin-bottom: .5rem;
+}
+
+.input__label {
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   row-gap: 12px;
+}
+
+.contact__form-inputs {
+   display: flex;
+   flex-direction: column;
+   row-gap: 1rem;
+}
+
+.contact__input {
+   display: flex;
+   align-items: center;
+   column-gap: 12px;
+   background-color: var(--gray-color);
+   padding: 1rem;
+   border-radius: .4rem;
+   width: 100%;
+}
+
+.contact__input input {
+   background: transparent;
+   outline: none;
+   border: none;
+}
+
+.contact__input input::placeholder {
+   font-family: var(--body-font);
+   font-size: 16px;
+}
+
+.input__label span {
+   font-size: 14px;
+   font-weight: 600;
+}
+
+.contact__form-flex {
+   display: flex;
+   flex-direction: column;
+   row-gap: 1rem;
+}
+
+.contact__map {
+   overflow: hidden;
+   border-radius: 1rem;
+}
+
+.contact__map iframe {
+   width: 100%;
+   height: 300px;
+}
 
 @keyframes marqueeMove {
    0% {
