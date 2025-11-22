@@ -6,7 +6,7 @@ export default function sendEmail() {
       e.preventDefault()
 
       // serviceID - templateID - #form - publickey
-      emailjs.sendForm('', '', '#contact-form', '')
+      emailjs.sendForm('service_z86g21q', 'template_wmxis5o', '#contact-form', '--rTMfrK7YmYR5xkm')
       .then(() => {
          contactMessage.textContent = 'Mensagem enviada com sucesso ✅';
 

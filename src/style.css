@@ -829,6 +829,14 @@ button {
 }
 
 /* CTA */
+.cta {
+   position: relative;
+}
+
+.cta__section-img {
+   display: none;
+}
+
 .cta__container {
    position: relative;
    background-color: var(--dark-color);
@@ -1337,6 +1345,7 @@ button {
 
    .services__data {
       align-content: center;
+      text-align: initial;
    }
 
    .services__card {
@@ -1430,10 +1439,15 @@ button {
 @media(min-width: 1024px) {
    :root {
       --h1-font-size: 64px;
+      --h2-font-size: 52px;
    }
 
    .container {
       margin-inline: 3rem;
+   }
+
+   .section {
+      padding-block: 72px;
    }
 
    /* HEADER */
@@ -1465,17 +1479,36 @@ button {
    }
 
    .about__container {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 45% 55%;
       align-items: center;
       column-gap: 3rem;
    }
 
    .about__image {
-      height: 100%;
+      height: 500px;
+   }
+
+   .about__data {
+      text-align: initial;
+   }
+
+   .about__buttons {
+      justify-content: start;
+   }
+
+   .partner__container {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 4rem;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   .partner__data {
+      text-align: initial;
    }
 
    .marquee__move-item h4 {
-      font-size: 32px;
+      font-size: 24px;
    }
 
    .marquee__moving-content.yellow {
@@ -1484,6 +1517,83 @@ button {
 
    .marquee__move-item {
       margin: 0 2rem;
+   }
+
+   .cta__content {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   .cta__data {
+      text-align: initial;
+   }
+
+   .cta__image {
+      display: none;
+   }
+
+   .cta__section-img {
+      position: absolute;
+      display: initial;
+      width: 400px;
+      z-index: 1;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10%;
+   }
+
+   .cta__icon-1 {
+      top: -8rem;
+      right: -12rem;
+   }
+
+   .cta__icon-2 {
+      bottom: -8rem;
+      left: -12rem;
+   }
+
+   .faq__container {
+      grid-template-columns: initial;
+      justify-items: initial;
+   }
+
+   .faq__content {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1.5rem;
+   }
+
+   .contact__container {
+      grid-template-columns: initial;
+      justify-self: initial;
+   }
+
+   .contact__container {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-between;
+      column-gap: 2.5rem;
+   }
+
+   .contact__infos button {
+      justify-self: start;
+   }
+
+   .contact__map {
+      height: 100%;
+   }
+
+   .footer__container {
+      grid-template-columns: initial;
+   }
+
+   /* SECTION RADIUS */
+   .hero__image,
+   .destaque,
+   .partner,
+   .cta__container,
+   .contact__container,
+   .footer__content {
+      border-radius: 1.5rem;
    }
 }
 
