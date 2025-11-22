@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 :root {
    --header-height: 3.5rem;
 
@@ -30,9 +32,13 @@
    box-sizing: border-box;
 }
 
+html {
+   scroll-behavior: smooth;
+}
+
 body {
    font-family: var(--body-font);
-   font-weight: 100;
+   font-weight: 400;
    font-size: var(--body-font-size);
 }
 
@@ -54,6 +60,10 @@ h2 {
    font-family: var(--title-font);
    text-transform: uppercase;
    line-height: 110%;
+}
+
+p {
+   line-height: 150%;
 }
 
 img {
@@ -218,8 +228,17 @@ button {
    font-size: 1.25rem;
 }
 
+.button__icon i {
+   will-change: transform;
+   transition: transform .3s;
+}
+
 .button:hover {
    box-shadow: 0 16px 24px 0 rgba(27, 128, 65, 0.12);
+}
+
+.button:hover .button__icon i {
+   transform: translate(.25rem, .25rem);
 }
 
 .button-blur {
@@ -315,6 +334,7 @@ button {
 }
 
 .mark__content {
+   cursor: pointer;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -601,6 +621,15 @@ button {
    scale: 1.2;
 }
 
+.services__card-icon i {
+   will-change: transform;
+   transition: .3s;
+}
+
+.services__card:hover .services__card-icon i {
+   transform: translate(.25rem, -.25rem);
+}
+
 .service__card-decoration {
    position: absolute;
    top: -.4rem;
@@ -652,13 +681,14 @@ button {
 }
 
 .services__card-title {
+   font-size: 18px;
    display: inline-block;
    margin-bottom: .5rem;
    font-weight: 600;
 }
 
 .services__card-description {
-   font-size: 14px;
+   font-size: var(--body-font);
    line-height: 180%;
 }
 
@@ -1216,7 +1246,6 @@ button {
 
 .footer__link {
    color: var(--white-color);
-   font-weight: 100;
    opacity: .7;
    transition: all.4s;
 }
@@ -1777,6 +1806,10 @@ button {
 
    .services__card-icon {
       scale: 1.3;
+   }
+
+   .services__card-title {
+      font-size: 1.25rem;
    }
 
    .services__yellow-img {

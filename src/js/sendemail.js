@@ -6,7 +6,7 @@ export default function sendEmail() {
       e.preventDefault()
 
       // serviceID - templateID - #form - publickey
-      emailjs.sendForm('service_z86g21q', 'template_wmxis5o', '#contact-form', '--rTMfrK7YmYR5xkm')
+      emailjs.sendForm('service_z86g21q', 'template_wmxis5o', '#contact-form', '8nZG7CgvJv9C5iUUv')
       .then(() => {
          contactMessage.textContent = 'Mensagem enviada com sucesso ✅';
 
@@ -15,8 +15,8 @@ export default function sendEmail() {
          }, 5000)
 
          contactForm.reset();
-      }, () => {
-         contactMessage.textContent = "Erro ao enviar a mensagem ❌";
+      }, (err) => {
+         contactMessage.textContent = `Erro ao enviar a mensagem ❌ ${err.text || ''}`;
          
          setTimeout(() => {
             contactMessage.textContent = '';
