@@ -447,9 +447,8 @@ button {
 
 .destaque__bg-img {
    position: absolute;
-   bottom: 5rem;
-   left: 50%;
-   transform: translate(-50%) rotate(90deg);
+   bottom: 0;
+   right: 0;
    max-width: 600px;
    opacity: .5;
 }
@@ -872,11 +871,10 @@ button {
 
 .cta__container-bg {
    position: absolute;
-   transform: translateX(-50%) rotate(90deg);
-   max-width: 500px;
-   left: 50%;
+   width: auto;
+   height: 100%;
+   right: 0;
    bottom: 0;
-   opacity: .6;
 }
 
 .cta__title {
@@ -1332,10 +1330,7 @@ button {
    }
 
    .destaque__bg-img {
-      transform: translate(-32%) rotate(-90deg);
-      bottom: 10rem;
       max-width: 800px;
-      opacity: .3;
    }
 
    .services__container {
@@ -1377,12 +1372,6 @@ button {
 
    .cta__container {
       padding: 4rem 3.5rem;
-   }
-
-   .cta__container-bg {
-      transform: translateX(-50%) rotate(180deg) scaleX(-1);
-      opacity: .4;
-      max-width: 800px;
    }
 
    .cta__content {
@@ -1553,6 +1542,11 @@ button {
       left: -12rem;
    }
 
+   .cta__container-bg {
+      width: 600px;
+      height: auto;
+   }
+
    .faq__container {
       grid-template-columns: initial;
       justify-items: initial;
@@ -1689,6 +1683,10 @@ button {
       box-shadow: 0 32px 100px 0 rgba(1, 7, 10, 0.212);
    }
 
+   .cta__container-bg {
+      width: 800px;
+   }
+
    .footer__content {
       padding: 4rem 3.5rem;
    }
@@ -1732,6 +1730,34 @@ button {
       font-size: 128px;
    }
 
+   .destaque__bg-img {
+      opacity: 1;
+      width: auto;
+      height: 100%;
+   }
+
+   .destaque__shine {
+      width: 700px;
+      height: 700px;
+      opacity: .4;
+   }
+
+   .destaque__shine-1{
+      left: -200px;
+      top: -200px;
+      opacity: .2;
+   }
+
+   .destaque__shine-2 {
+      bottom: -200px;
+      right: -300px;
+   }
+
+   .destaque__shine-3 {
+      opacity: .1;
+      right: -200px;
+   }
+
    .services__card {
       height: 430px;
    }
@@ -1748,16 +1774,41 @@ button {
       width: 344px;
    }
 
+   .partner__shine {
+      width: 700px;
+      height: 700px;
+   }
+
+   .partiner__shine-1 {
+      left: -350px;
+      top: -350px;
+      opacity: .3;
+   } 
+
+   .partiner__shine-2 {
+      bottom: -400px;
+      right: -350px;
+      opacity: .4;
+   } 
+
    .marquee {
       height: 35vh;
    }
 
-   .cta__container  {
+   .cta__container {
       padding: 8.5rem 3.5rem;
    }
 
    .cta__section-img {
       width: 480px;
+   }
+
+   .cta__shine {
+      width: 700px;
+      height: 700px;
+      right: -200px;
+      bottom: -400px;
+      opacity: .5;
    }
 
    .faq__title {
