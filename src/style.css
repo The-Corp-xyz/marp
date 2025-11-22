@@ -275,6 +275,7 @@ button {
    width: 100%;
    height: 100%;
    object-fit: cover;
+   transition: background .5s;
 }
 
 .hero__image-overlay {
@@ -332,11 +333,13 @@ button {
    height: 0px;
    width: 2px;
    background-color: var(--white-color);
+   transition: .4s;
 }
 
 .mark__content span {
    color: var(--white-color);
    font-weight: 600;
+   transition: .4s;
 }
 
 /* ABOUT */
@@ -1700,6 +1703,10 @@ button {
       --h2-font-size: 64px;
    }
 
+   p {
+      line-height: 180%;
+   }
+
    .about__container {
       column-gap: 64px
    }
@@ -1762,6 +1769,14 @@ button {
 
    .services__card {
       height: 430px;
+   }
+
+   .services__card:nth-last-child(1) {
+      height: 464px;
+   }
+
+   .services__card-icon {
+      scale: 1.3;
    }
 
    .services__yellow-img {
