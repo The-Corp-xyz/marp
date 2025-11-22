@@ -2,7 +2,7 @@ const navMenu = document.getElementById("nav-menu");
 const navClose = document.getElementById("nav-close");
 const navToggle = document.getElementById("nav-toggle");
 
-export const menu = () => {
+export default function openMenu() {
    if (navToggle) {
       navToggle.addEventListener("click", () => {
          navMenu.classList.add("show-menu");
@@ -23,4 +23,4 @@ export const menu = () => {
       navMenu.classList.remove('show-menu')
    }
    navLink.forEach(n => n.addEventListener('click', linkAction))
-}
+} 

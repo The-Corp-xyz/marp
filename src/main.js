@@ -1,6 +1,8 @@
 import './style.css';
-import { menu } from './js/menu';
+import openMenu from './js/menu';
+import accordionOpen from './js/accordion';
 
 document.addEventListener("DOMContentLoaded", () => {
-   menu();
+   openMenu();
+   accordionOpen();
 })

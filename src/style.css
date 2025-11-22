@@ -5,6 +5,7 @@
    --dark-color: #01070A;
    --first-color: #1B8041;
    --secundary-color: #F4C400;
+   --gray-color: #FAFAFA;
    --linear-color: linear-gradient(97deg, #40AC7C 0%, #185D3B 100%);
 
    --title-font: anton;
@@ -733,6 +734,86 @@ img {
    bottom: 5rem;
    transform: rotate(-18deg);
 }
+
+/* FAQ */
+.faq__container {
+   row-gap: 2rem;
+}
+
+.faq__title {
+   text-align: center;
+   font-size: var(--h2-font-size);
+}
+
+.faq__content {
+   row-gap: 1.5rem;
+}
+
+.faq__col {
+   display: grid;
+   row-gap: 1.5rem;
+}
+
+.faq__card {
+   background-color: var(--white-color);
+   box-shadow: 0 6px 44px 0 rgba(39, 69, 190, 0.05);
+   border-radius: 12px;
+   overflow: hidden;
+}
+
+.faq__header {
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   column-gap: 2rem;
+   padding: 1rem;
+}
+
+.faq__card-title {
+   font-size: 1rem;
+   color: var(--dark-color);
+   line-height: 135%;
+}
+
+.faq__card-icon {
+   min-width: 40px;
+   min-height: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 8px;
+   background-color: var(--gray-color);
+}
+
+.faq__card-content {
+   overflow: hidden;
+   padding-inline: 1rem;
+   height: 0;
+}
+
+.faq__card,
+.faq__card-content,
+.faq__card-icon,
+.faq__card-text,
+.faq__card-title {
+   transition: all .4s;
+}
+
+.accordion-open .faq__header,
+.accordion-open .faq__card-content {
+   background-color: var(--dark-color);
+}
+
+.accordion-open .faq__header  .faq__card-title,
+.accordion-open .faq__card-content {
+   color: var(--white-color);
+}
+
+.accordion-open .faq__header .faq__card-icon {
+   background-color: var(--white-color);
+   color: var(--dark-color);
+}
+
 
 @keyframes marqueeMove {
    0% {
