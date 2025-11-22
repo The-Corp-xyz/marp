@@ -102,23 +102,24 @@ button {
    overflow: hidden;
    padding-inline: 1rem;
    margin-top: 2rem;
+   background: rgb(1, 7, 10);
 }
 
 .nav__logo {
    width: 90px;
 }
 
-.nav::after {
+/* .nav__blur {
    position: absolute;
-   content: "";
    left: 0;
    top: 0;
    width: 100%;
    height: 100%;
    background: rgba(1, 7, 10, 0.40);
+   -webkit-backdrop-filter: blur(20px);
    z-index: -1;
    backdrop-filter: blur(20px);
-}
+} */
 
 @media (max-width: 1023px) {
    .nav__menu {
@@ -130,19 +131,20 @@ button {
       padding: 8rem 1.5rem 5rem 1.5rem;
       z-index: 100;
       transition: all .4s;
+      background-color: rgb(1, 7, 10);
    }
 
-   .nav__menu::before {
+   /* .menu__blur {
       position: absolute;
       top: 0;
-      right: 0;
-      content: " ";
+      left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(1, 7, 10, 0.514);
-      z-index: -1;
+      background-color: rgba(1, 7, 10, 0.40);
       backdrop-filter: blur(32px);
-   }
+      -webkit-backdrop-filter: blur(32px);
+      z-index: -1;
+   } */
 }
 
 .nav__list {
@@ -1742,7 +1744,7 @@ button {
       opacity: .4;
    }
 
-   .destaque__shine-1{
+   .destaque__shine-1 {
       left: -200px;
       top: -200px;
       opacity: .2;
@@ -1783,13 +1785,13 @@ button {
       left: -350px;
       top: -350px;
       opacity: .3;
-   } 
+   }
 
    .partiner__shine-2 {
       bottom: -400px;
       right: -350px;
       opacity: .4;
-   } 
+   }
 
    .marquee {
       height: 35vh;
