@@ -317,7 +317,7 @@
             <div class="services__card services__yellow">
                <img src="/images/services-card-img-1.png" alt="" class="service__card-decoration">
 
-          
+
                <div class="services__yellow-images">
                   <div class="services__yellow-overlay"></div>
 
@@ -828,7 +828,7 @@
       <section class="contact section" id="">
          <div class="contact__container container grid">
             <div class="contact__infos">
-               <form action="" class="contact__form">
+               <form action="" class="contact__form" id="contact-form">
                   <div class="contact__form-top">
                      <h3 class="contact__form-title">
                         Entrar em contato
@@ -847,7 +847,7 @@
 
                            <div class="contact__input">
                               <i class="ri-user-line"></i>
-                              <input type="text" placeholder="Digite seu nome...">
+                              <input name="user_name" type="text" placeholder="Digite seu nome...">
                            </div>
                         </div>
 
@@ -856,7 +856,7 @@
 
                            <div class="contact__input">
                               <i class="ri-mail-open-line"></i>
-                              <input type="text" placeholder="Digite seu email...">
+                              <input name="user_email" type="email" placeholder="Digite seu email...">
                            </div>
                         </div>
                      </div>
@@ -867,7 +867,7 @@
 
                            <div class="contact__input">
                               <i class="ri-hotel-line"></i>
-                              <input type="text" placeholder="Nome da empresa...">
+                              <input name="user_empresa" type="text" placeholder="Nome da empresa...">
                            </div>
                         </div>
 
@@ -876,7 +876,7 @@
 
                            <div class="contact__input">
                               <i class="ri-phone-line"></i>
-                              <input type="text" placeholder="Telefone...">
+                              <input name="user_phone" type="number" placeholder="Telefone...">
                            </div>
                         </div>
                      </div>
@@ -886,12 +886,15 @@
 
                         <div class="contact__input">
                            <i class="ri-user-line"></i>
-                           <textarea name="message" rows="6" cols="50" placeholder="Escreva sua mensagem..."></textarea>
+                           <textarea name="user_message" rows="6" cols="50"
+                              placeholder="Escreva sua mensagem..."></textarea>
                         </div>
                      </div>
                   </div>
 
-                  <button href="" class="button">
+                  <span class="contact__message" id="contact-message"></span>
+
+                  <button type="submit" class="button">
                      Solicitar Contato
 
                      <div class="button__icon">
@@ -943,7 +946,7 @@
                   <div class="footer__social-icon">
                      <i class="ri-youtube-fill"></i>
                   </div>
-                  
+
                   <div class="footer__social-icon">
                      <i class="ri-instagram-fill"></i>
                   </div>
@@ -996,6 +999,9 @@
          </div>
       </div>
    </footer>
+
+
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
    <script type="module" src="/src/main.js"></script>
 </body>
