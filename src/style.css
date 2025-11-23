@@ -1119,19 +1119,20 @@ button {
    font-size: 1rem;
 }
 
-.contact__input:nth-last-child(1) {
-   align-items: start;
-}
-
 .contact__input textarea::placeholder {
    font-family: var(--body-font);
    font-size: 1rem;
+}
+
+.contact__input:nth-last-child(1) {
+   align-items: start;
 }
 
 .contact__input input {
    background: transparent;
    outline: none;
    border: none;
+   width: 100%;
 }
 
 .contact__input input::placeholder {
@@ -1344,6 +1345,22 @@ button {
 
    .services__card-description {
       font-size: 12px;
+   }
+
+   .contact__input input {
+      font-size: 14px;
+   }
+
+   .contact__input input::placeholder {
+      font-size: 14px;
+   }
+
+   .contact__input textarea {
+      font-size: 14px;
+   }
+
+   .contact__input textarea::placeholder {
+      font-size: 14px;
    }
 }
 
