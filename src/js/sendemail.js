@@ -11,16 +11,26 @@ export default function sendEmail() {
    const sendEmail = (e) => {
       e.preventDefault()
 
-      if (!nameInput.length) {
+      if (!nameInput.value.length) {
          contactMessage.textContent = 'Por favor insira seu nome! ❌';
-      } else if (!emailInput.length) {
+
+         setTimeout(() => {contactMessage.textContent = ''}, 3000)
+      } else if (!emailInput.value.length) {
          contactMessage.textContent = 'Por favor insira seu Email! ❌';
-      } else if (!empresaInput.length) {
+
+         setTimeout(() => {contactMessage.textContent = ''}, 3000)
+      } else if (!empresaInput.value.length) {
          contactMessage.textContent = 'Por favor insira seu o nome da empresa! ❌';
-      } else if (!phoneInput.length) {
+
+        setTimeout(() => {contactMessage.textContent = ''}, 3000)
+      } else if (!phoneInput.value.length) {
          contactMessage.textContent = 'Por favor insira seu o número de celular! ❌';
-      } else if (!textArea.length) {
+
+         setTimeout(() => {contactMessage.textContent = ''}, 3000)
+      } else if (!textArea.value.length) {
          contactMessage.textContent = 'Por favor insira um texto! ❌';
+
+         setTimeout(() => {contactMessage.textContent = ''}, 3000)
       } else {
 
          // serviceID - templateID - #form - publickey
