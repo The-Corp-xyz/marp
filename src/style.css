@@ -98,6 +98,11 @@ button {
    display: grid;
 }
 
+.split-line,
+.split-parent {
+   overflow: hidden;
+}
+
 /* HEADER */
 .header {
    position: fixed;
@@ -278,7 +283,6 @@ button {
 .hero {
    display: grid;
    width: 100%;
-   /* height: 100vh; */
    height: max-content;
    padding: 12px;
 }
@@ -691,14 +695,14 @@ button {
 }
 
 .services__card-title {
-   font-size: 18px;
+   font-size: 16px;
    display: inline-block;
    margin-bottom: .5rem;
    font-weight: 600;
 }
 
 .services__card-description {
-   font-size: var(--body-font);
+   font-size: 14px;
    line-height: 180%;
 }
 
@@ -707,10 +711,10 @@ button {
    min-height: 40px;
    background-color: var(--white-color);
    border-radius: 50%;
-   display: grid;
    place-items: center;
    color: var(--dark-color);
    font-size: 1.25rem;
+   display: none;
 }
 
 .services__yellow {
@@ -1316,8 +1320,30 @@ button {
 
 /* MEDIA QUERIES */
 @media(max-width: 320px) {
+   :root {
+      --h1-font-size: 40px;
+      --h2-font-size: 36px;
+      --body-font-size: 14px;
+   }
+
    .container {
       margin-inline: 1rem;
+   }
+
+   .nav__menu {
+      width: 100%;
+   }
+
+   .services__card-icon {
+      display: none;
+   }
+
+   .services__card-title {
+      font-size: 14px;
+   }
+
+   .services__card-description {
+      font-size: 12px;
    }
 }
 
@@ -1423,6 +1449,14 @@ button {
 
    .services__yellow-img {
       width: 300px;
+   }
+
+   .services__card-title {
+      font-size: 18px;
+   }
+
+   .services__card-description {
+      font-size: var(--body-font-size);
    }
 
    .partner__container {
@@ -1557,6 +1591,10 @@ button {
       column-gap: 8rem;
    }
 
+   .services__card-icon {
+      display: grid;
+   }
+
    .partner__container {
       grid-template-columns: repeat(2, 1fr);
       column-gap: 4rem;
@@ -1627,11 +1665,6 @@ button {
    .faq__content {
       grid-template-columns: repeat(2, 1fr);
       column-gap: 1.5rem;
-   }
-
-   .contact__container {
-      grid-template-columns: initial;
-      justify-self: initial;
    }
 
    .contact__container {
@@ -1935,5 +1968,9 @@ button {
 @media (min-width: 1440px) {
    .marquee {
       height: 40vh;
+   }
+
+   .hero {
+      max-height: 100vh;
    }
 }
