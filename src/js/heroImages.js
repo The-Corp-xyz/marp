@@ -55,9 +55,9 @@
 
 export default function heroImages() {
    const images = [
-      '/images/hero-img-1.png',
-      '/images/hero-img-2.png',
-      '/images/hero-img-3.png'
+      '/images/hero-img-1.webp',
+      '/images/hero-img-2.webp',
+      '/images/hero-img-3.webp'
    ];
 
    const sliderImage = document.querySelector(".hero__img");
