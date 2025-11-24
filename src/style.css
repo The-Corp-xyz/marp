@@ -1302,6 +1302,24 @@ button {
    font-size: 14px;
 }
 
+/* SIMPLE FOOTER */
+.footer__middle {
+   display: flex;
+   flex-direction: column;
+   row-gap: 2rem;
+}
+
+.footer__list {
+   display: flex;
+   flex-direction: column;
+   row-gap: 1.25rem;
+}
+
+.footer__cnpj {
+   line-height: 135%;
+   text-align: center;
+}
+
 /* KEYFRAMES ANIMATIONS */
 @keyframes marqueeMove {
    0% {
@@ -1538,7 +1556,12 @@ button {
       row-gap: 3.5rem;
    }
 
-   .footer__bottom {
+   /* .footer__bottom {
+      flex-direction: row;
+      justify-content: space-between;
+   } */
+
+   .footer__list {
       flex-direction: row;
       justify-content: space-between;
    }
@@ -1700,6 +1723,15 @@ button {
 
    .footer__container {
       grid-template-columns: initial;
+   }
+
+   .footer__list {
+      column-gap: 2rem;
+   }
+
+   .footer__middle {
+      flex-direction: row;
+      justify-content: space-between;
    }
 
    /* SECTION RADIUS */
@@ -1957,10 +1989,10 @@ button {
       padding: 5rem 0 3rem 0;
    }
 
-   .footer__content {
+   /* .footer__content {
       grid-template-columns: 30% 60%;
       justify-content: space-between;
-   }
+   } */
 
    .footer__logo {
       margin-bottom: 1.5rem;
