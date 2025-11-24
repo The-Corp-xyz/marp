@@ -1,3 +1,5 @@
+import emailjs from '@emailjs/browser';
+
 const contactForm = document.getElementById("contact-form"),
    contactMessage = document.getElementById("contact-message")
 
@@ -35,7 +37,9 @@ export default function sendEmail() {
 
          // serviceID - templateID - #form - publickey
          emailjs.sendForm('service_z86g21q', 'template_wmxis5o', '#contact-form', '8nZG7CgvJv9C5iUUv')
-            .then(() => {
+            .then((response) => {
+               console.log('SUCCESS!', response.status, response.text);
+
                contactMessage.textContent = 'Mensagem enviada com sucesso ✅';
 
                setTimeout(() => {
@@ -44,6 +48,7 @@ export default function sendEmail() {
 
                contactForm.reset();
             }, (err) => {
+               console.log('FAILED...', err);
                contactMessage.textContent = `Erro ao enviar a mensagem ❌ ${err.text || ''}`;
 
                setTimeout(() => {
