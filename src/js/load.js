@@ -1,5 +1,3 @@
-
-
 export default function load() {
    onload = () => {
       const load = document.getElementById("page-load");
