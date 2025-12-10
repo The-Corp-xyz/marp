@@ -1757,6 +1757,7 @@ button {
    .faq__content {
       grid-template-columns: repeat(2, 1fr);
       column-gap: 1.5rem;
+      align-items: start;
    }
 
    .contact__container {
